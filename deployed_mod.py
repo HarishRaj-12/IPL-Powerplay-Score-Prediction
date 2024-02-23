@@ -18,7 +18,7 @@ def load_lottieurl(url):
 
 
 
-logo = Image.open("C:/Users/haris/Desktop/ML/Powerplay/logo.png")
+logo = Image.open("logo.png")
 
 with st.container():
     l,r=st.columns((1,3))
@@ -39,10 +39,10 @@ def local_css(fn):
     with open(fn) as f:
         st.markdown(f"<style>{f.read()}</style>",unsafe_allow_html=True)
 
-local_css("C:/Users/haris/Desktop/ML/Powerplay/style.css")
+local_css("style.css")
 
 # loading the saved model
-loaded_model = pickle.load(open("C:/Users/haris/Desktop/ML/IPL powerplay Prediction/trained_model.sav", 'rb'))
+loaded_model = pickle.load(trained_model.sav", 'rb'))
 
 team=["Chennai Super Kings","Delhi Capitals","Kolkata Knight Riders","Mumbai Indians","Punjab Kings","Rajasthan Royals","Royal Challengers Bangalore","Sunrisers Hyderabad"]
 ground=['Kolkata', 'Mumbai', 'Pune', 'Delhi', 'Chennai', 'Hyderabad','Bangalore', 'Jaipur', 'Dharamsala']
@@ -55,7 +55,7 @@ g=st.selectbox("Select Ground",options=ground)
 if team1==team2:
     st.warning("Select different teams")
     sys.exit()
-    
+                    
     
 t=[0]*8
 t[team.index(team1)]=1
