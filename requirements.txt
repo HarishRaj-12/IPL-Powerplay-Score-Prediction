@@ -1,0 +1,7 @@
+streamlit
+sys
+requests
+streamlit_lottie
+PIL
+pickle
+math
