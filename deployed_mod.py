@@ -42,7 +42,8 @@ def local_css(fn):
 local_css("style.css")
 
 # loading the saved model
-loaded_model = pickle.load("trained_model.sav", 'rb')
+with open("trained_model.sav", 'rb') as file:
+    loaded_model = pickle.load(file)
 
 team=["Chennai Super Kings","Delhi Capitals","Kolkata Knight Riders","Mumbai Indians","Punjab Kings","Rajasthan Royals","Royal Challengers Bangalore","Sunrisers Hyderabad"]
 ground=['Kolkata', 'Mumbai', 'Pune', 'Delhi', 'Chennai', 'Hyderabad','Bangalore', 'Jaipur', 'Dharamsala']
