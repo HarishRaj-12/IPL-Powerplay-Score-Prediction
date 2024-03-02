@@ -18,7 +18,7 @@ def load_lottieurl(url):
 
 
 
-logo = Image.open("logo.png")
+logo = Image.open("logo.jpeg")
 
 with st.container():
     l,r=st.columns((1,3))
